@@ -1,0 +1,37 @@
+
+nav {
+  height: 120px;
+  background-color: #4056A1;
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: space-between;
+  align-items: center;
+}
+
+nav span {
+  color: #FFFFFF;
+  font-family: 'Bungee';
+  padding-left: 24px;
+}
+
+nav div {
+  color: #FFFFFF;
+  font-family: 'Bungee';
+  padding-right: 24px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+nav div h6 {
+  margin-bottom: 7px;
+}
+
+header {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+}
+
