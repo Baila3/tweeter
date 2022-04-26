@@ -18,9 +18,13 @@ body {
   color: #545149;
   background-color: #f4f1ec;
   font-size: 24px;
-  font-family:  sans-serif;
+  font-family:  'source sans pro';
 }
 
+
+/*
+* Additional CSS can be defined below or in other CSS files, as per instructions
+*/
 .container {
   background-color: #f4f1ec;
   text-align: center;
@@ -28,6 +32,63 @@ body {
   margin-top: -100px;
 }
 
-/*
- * Additional CSS can be defined below or in other CSS files, as per instructions
- */
+.containerTweet {
+  width: 100%;
+  border: 3px solid #545149;
+  margin-top: 20px;
+  height: 250px;
+}
+
+.articleTweetHeader {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+.articleSeperateHandle {
+  display: flex;
+  align-items: center;
+}
+
+.articleImageTweet {
+  padding-left: 24px;
+  margin-right: 10px;
+  width: 50px;
+  height: auto;
+}
+
+.articleIsaacHandle {
+  padding-right: 24px;
+  opacity: 0.5;
+}
+.articleTweeterFooter { 
+  border-top: 50%;
+  border-top: 2px solid #545149;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.articleDate {
+  font-size: medium;
+  padding-left: 24px;
+}
+
+.articlefoterIcons {
+  padding-right: 24px;
+}
+.fa-solid.fa-flag:hover {
+  color: blueviolet;
+}
+
+.fa-solid.fa-heart:hover {
+  color: blueviolet;
+}
+
+.fa-solid.fa-retweet:hover {
+  color: blueviolet;
+}
+
+.containerTweet:hover {
+  box-shadow: 0 3px 10px rgb(0 0 0 / 0.2); 
+}

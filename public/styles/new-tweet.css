@@ -25,4 +25,10 @@ output {
 .danger {
  color: red;
 }
+.container.tweet {
+  background-color: #FFFFFF;
+}
+.article.tweet header {
+  background-color: #FFFFFF;
+}
 
