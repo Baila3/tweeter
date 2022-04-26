@@ -1,5 +1,11 @@
 header {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
   height: 400px;
   width: 100%;
   background-color: blueviolet;
+  background-image: url("https://www.transparenttextures.com/patterns/arabesque.png");
 }

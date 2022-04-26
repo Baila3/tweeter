@@ -1,0 +1,24 @@
+textarea {
+  border: 0px solid #000000;
+    border-bottom-width: 1px;
+    background-color: transparent;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+button {
+  display: flex;
+  justify-content: start;
+  color: #FFFFFF;
+  background-color: #4056A1;
+  font-family: 'Bungee';
+  margin-top: 7px;
+}
+output {
+  display: flex;
+  justify-content: end;
+  margin-top: -30px;
+  font-family: 'Bungee';
+}
+
