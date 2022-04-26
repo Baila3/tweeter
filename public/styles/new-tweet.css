@@ -22,3 +22,7 @@ output {
   font-family: 'Bungee';
 }
 
+.danger {
+ color: red;
+}
+
