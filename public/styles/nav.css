@@ -3,9 +3,13 @@ nav {
   height: 120px;
   background-color: #4056A1;
   display: flex;
+  position: fixed;
   flex-direction: row-reverse;
   justify-content: space-between;
   align-items: center;
+  top: -30px; /* Hide the navbar 50 px outside of the top view */
+  width: 100%; /* Full width */
+  transition: top 0.3s;
 }
 
 nav span {
@@ -26,6 +30,8 @@ nav div {
 nav div h6 {
   margin-bottom: 7px;
 }
+
+
 
 
 
