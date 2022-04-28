@@ -32,9 +32,16 @@ $(document).ready(() => {
   const renderTweets = function(tweets) {
     for (const tweet of tweets) {
       createTweetElement(tweet)
-      $('#tweets-container').append(createTweetElement(tweet))
+      $('#tweets-container').prepend(createTweetElement(tweet))
     }
   }
+
+  const escape = function (str) {
+    let div = document.createElement("div");
+    div.appendChild(document.createTextNode(str));
+    return div.innerHTML;
+  };
+  
   
   const createTweetElement = function(tweet) {
     let $tweet = $(`<div id="tweets-container">
@@ -45,9 +52,9 @@ $(document).ready(() => {
       </div>
         <p class="articleIsaacHandle">${tweet["user"]["handle"]}</p>
       </header>
-      <p>${tweet["content"]["text"]}</p>
+      <p>${escape(tweet["content"]["text"])}</p>
       <footer class="articleTweeterFooter">
-        <p class="articleDate">${tweet["created_at"]}</p>
+        <p class="articleDate">${timeago.format(tweet["created_at"])}</p>
         <div class="articlefoterIcons">
           <i class="fa-solid fa-flag"></i>
           <i class="fa-solid fa-retweet"></i>
@@ -61,28 +68,47 @@ $(document).ready(() => {
   
   renderTweets(data);
 
-  // const loadTweets = function() {
-  //   const $button = $('button');
-  //   $button.on('click', function () {
-  //     console.log('Button clicked, performing ajax call...');
-  //     $.ajax('index.html', { method: 'GET' })
-  //     .then(function (indexhtml) {
-  //       console.log('Success: ', indexhtml);
-  //       $button.replaceWith(indexhtml);
-  //     });
-  //   });
-  // }
-  // loadTweets()
+  // const loadTweets = () => {
+  //   $.ajax({
+  //     method: "GET",
+  //     url: "/tweets",
+  //     dataType: "json",
+  //     success: function(data) {
+  //       renderTweets(data);
+  //     }
+  //   })
+  // };
+
+  const loadTweet = function() {
+    $.ajax({
+      method: "GET",
+      url: "/tweets",
+      dataType: "json"
+    }).then((res) => {
+      let arr = [];
+      let tweet = res.pop()
+      arr.push(tweet)
+      renderTweets(arr)
+    })
+  }
+
+  const triggerTweet = ( event ) => {
+    event.preventDefault();
+    if ($("#tweet-text").val() === "" || $("#tweet-text").val() === null ) {
+    return  $h1.text("This tweet is empty")
+   } 
+  const formData = $("form").serialize()
+  console.log(formData)
+  $.post("http://localhost:8080/tweets", formData, () => { loadTweet() });
+  // $.ajax({
+  //   method: "POST",
+  //   data: formData,
+  //   url: "/tweets",
+  //   dataType: 'json'
+  // }).then(() => console.log("message"))
+}
+$( "form" ).submit(triggerTweet)
+
+ 
 })
-
-// const triggerTweet = (event) => {
-//   event.preventDefault();
-//   const formData = $("form").serialize()
-//   $ajax({
-//     method: "POST",
-//     data: formData,
-//     url: "/tweets",
-//   }).then((res) => createTweetElement(res) )
-// }
-
 
