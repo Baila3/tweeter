@@ -8,3 +8,22 @@
   background-color: blueviolet;
   background-image: url("https://www.transparenttextures.com/patterns/arabesque.png");
 }
+
+@media only screen and (min-width: 1024px) {
+  #TweetnHeader {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    margin-top: 100px;
+  }
+  .headerprofile {
+    margin-top: 100px;
+    width: 50%;
+    height: 400px;
+    margin-left: 30px;
+    display: flex;
+    justify-content: center;
+    padding-bottom: 40px;
+   
+  }
+}

@@ -39,4 +39,9 @@ nav div h6 {
 }
 
 
-
+@media only screen and (max-width: 1024px) {
+  nav {
+   background-color:  blueviolet;
+   background-image: url("https://www.transparenttextures.com/patterns/arabesque.png");
+  }
+}

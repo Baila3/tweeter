@@ -40,6 +40,7 @@
     </div>
       <span>tweeter</span>
     </nav>
+    <div id="TweetnHeader" >
     <header class="headerprofile">
       <div>
           <img src="/images/profile-hex.png"> 
@@ -51,8 +52,17 @@
   </header>
     <!-- Page-specific (main) content here -->
     <main class="container">
-      <section class="new-tweet">
-        <h2 id="error mesg"hidden>This tweet is empty</h2>
+      <section class="new-tweet"> 
+        <div id="message1" class="notextError">
+          <i class="fa-solid fa-circle-exclamation"></i>
+          <p>This Tweet Is Empty!</p>
+          <i class="fa-solid fa-circle-exclamation"></i>
+        </div>
+        <div id="message2" class="lengthError">
+          <i class="fa-solid fa-circle-exclamation"></i>
+          <p>This Tweet Is too long!</p>
+          <i class="fa-solid fa-circle-exclamation"></i>
+        </div id="textForTweet">
         <form method="POST" action="/tweets">
           <label for="tweet-text"></label>
           <textarea name="text" id="tweet-text" placeholder="What are you humming about?"></textarea>
@@ -64,5 +74,6 @@
         <div id="tweets-container"></div>
       </section>
     </main>
+    </div>
   </body>
 </html>

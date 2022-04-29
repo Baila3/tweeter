@@ -112,4 +112,42 @@ output {
 ;
  
 }
+.notextError {
+  display: none
+}
+.lengthError {
+  display: none
+}
+.errorMesg {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  color: red;
+  font-weight: 600;
+  align-items: center;
+  
+  /* visibility: visible; */
+}
+
+@media only screen and (min-width: 1024px) {
+ .container {
+   margin-top: 20px;
+   width: 100%;
+   padding: 100px;
+ }
+}
+@media only screen and (max-width: 768px) {
+  .container {
+    margin-top: 20px;
+    width: 100%;
+    padding: 10px;
+  }
+ }
+ @media only screen and (min-width: 768px) and (max-width: 1024px) {
+  .container {
+  margin-top: 20px;
+  width: 100%;
+  padding: 60px;
+  }
+}
 

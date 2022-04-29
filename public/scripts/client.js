@@ -95,8 +95,12 @@ $(document).ready(() => {
   const triggerTweet = ( event ) => {
     event.preventDefault();
     if ($("#tweet-text").val() === "" || $("#tweet-text").val() === null ) {
-    return  $h1.text("This tweet is empty")
-   } 
+    return  $('#message1').addClass("errorMesg")
+   } else if ($("#tweet-text").val().length > 140) {
+     return $('#message2').addClass("errorMesg")
+   }
+   $('#message1').removeClass("errorMesg")
+   $('#message2').removeClass("errorMesg")
   const formData = $("form").serialize()
   console.log(formData)
   $.post("http://localhost:8080/tweets", formData, () => { loadTweet() });
