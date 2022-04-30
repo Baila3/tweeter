@@ -53,15 +53,17 @@
     <!-- Page-specific (main) content here -->
     <main class="container">
       <section class="new-tweet"> 
+         <!-- hidden error message -->
         <div id="message1" class="notextError">
-          <i class="fa-solid fa-circle-exclamation"></i>
+          <i class="fa-solid fa-triangle-exclamation"></i>
           <p>This Tweet Is Empty!</p>
-          <i class="fa-solid fa-circle-exclamation"></i>
+          <i class="fa-solid fa-triangle-exclamation"></i>
         </div>
         <div id="message2" class="lengthError">
-          <i class="fa-solid fa-circle-exclamation"></i>
+          <i class="fa-solid fa-triangle-exclamation"></i>
           <p>This Tweet Is too long!</p>
-          <i class="fa-solid fa-circle-exclamation"></i>
+          <i class="fa-solid fa-triangle-exclamation"></i>
+            <!-- tweet text area-->
         </div id="textForTweet">
         <form method="POST" action="/tweets">
           <label for="tweet-text"></label>
@@ -71,6 +73,7 @@
             <output name="counter" class="counter" for="tweet-text">140</output>
           </div>
         </form>
+         <!-- tweet box-->
         <div id="tweets-container"></div>
       </section>
     </main>

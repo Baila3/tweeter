@@ -7,6 +7,7 @@ textarea {
     width: 100%;
 }
 
+/* tweet button */
 button {
   display: flex;
   justify-content: start;
@@ -15,6 +16,7 @@ button {
   font-family: 'Bungee';
   margin-top: 7px;
 }
+/* tweet character count */
 output {
   display: flex;
   justify-content: end;
@@ -22,12 +24,15 @@ output {
   font-family: 'Bungee';
 }
 
+/* tweet character count above 140 */
 .danger {
  color: red;
 }
+
 .container.tweet {
   background-color: #FFFFFF;
 }
+
 .article.tweet header {
   background-color: #FFFFFF;
 }
@@ -123,10 +128,8 @@ output {
   flex-direction: row;
   justify-content: space-between;
   color: red;
-  font-weight: 600;
+  font-weight: 100;
   align-items: center;
-  
-  /* visibility: visible; */
 }
 
 @media only screen and (min-width: 1024px) {
@@ -145,9 +148,9 @@ output {
  }
  @media only screen and (min-width: 768px) and (max-width: 1024px) {
   .container {
-  margin-top: 20px;
-  width: 100%;
-  padding: 60px;
+    margin-top: 20px;
+    width: 100%;
+    padding: 60px;
   }
 }
 

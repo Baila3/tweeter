@@ -1,4 +1,4 @@
-
+/* nav bar */
 nav {
   height: 120px;
   background-color: #4056A1;
@@ -7,17 +7,19 @@ nav {
   flex-direction: row-reverse;
   justify-content: space-between;
   align-items: center;
-  top: -30px; /* Hide the navbar 50 px outside of the top view */
-  width: 100%; /* Full width */
+  top: -30px; 
+  width: 100%; 
   transition: top 0.3s;
 }
 
+/* nav bar font color */
 nav span {
   color: #FFFFFF;
   font-family: 'Bungee';
   padding-left: 1.5em;
 }
 
+/* nav bar center items  */
 nav div {
   color: #FFFFFF;
   font-family: 'Bungee';
@@ -27,6 +29,7 @@ nav div {
   align-items: center;
 }
 
+/* nav bar h6 tag */
 nav div h6 {
   margin-bottom: 7px;
 }

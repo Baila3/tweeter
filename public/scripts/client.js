@@ -1,9 +1,5 @@
-/*
- * Client-side JS logic goes here
- * jQuery is already loaded
- * Reminder: Use (and do all your DOM work in) jQuery's document ready function
- */
 $(document).ready(() => {
+  // database
   const data = [
     {
       "user": {
@@ -29,10 +25,13 @@ $(document).ready(() => {
     }
   ]
 
+  // render tweets function
   const renderTweets = function(tweets) {
+    $('#tweet-text').val('');
+    $('.counter').val('140');
     for (const tweet of tweets) {
-      createTweetElement(tweet)
-      $('#tweets-container').prepend(createTweetElement(tweet))
+      createTweetElement(tweet);
+      $('#tweets-container').prepend(createTweetElement(tweet));
     }
   }
 
@@ -42,7 +41,7 @@ $(document).ready(() => {
     return div.innerHTML;
   };
   
-  
+  // createTweetElement function
   const createTweetElement = function(tweet) {
     let $tweet = $(`<div id="tweets-container">
     <article class="containerTweet">
@@ -65,20 +64,10 @@ $(document).ready(() => {
   </div>`);
     return $tweet;
   }
-  
+  // renderTweets function call
   renderTweets(data);
 
-  // const loadTweets = () => {
-  //   $.ajax({
-  //     method: "GET",
-  //     url: "/tweets",
-  //     dataType: "json",
-  //     success: function(data) {
-  //       renderTweets(data);
-  //     }
-  //   })
-  // };
-
+  //loadTweet function with ajax
   const loadTweet = function() {
     $.ajax({
       method: "GET",
@@ -92,6 +81,7 @@ $(document).ready(() => {
     })
   }
 
+  // triggerTweet function
   const triggerTweet = ( event ) => {
     event.preventDefault();
     if ($("#tweet-text").val() === "" || $("#tweet-text").val() === null ) {
@@ -104,14 +94,10 @@ $(document).ready(() => {
   const formData = $("form").serialize()
   console.log(formData)
   $.post("http://localhost:8080/tweets", formData, () => { loadTweet() });
-  // $.ajax({
-  //   method: "POST",
-  //   data: formData,
-  //   url: "/tweets",
-  //   dataType: 'json'
-  // }).then(() => console.log("message"))
 }
+// submit form
 $( "form" ).submit(triggerTweet)
+
 
  
 })
