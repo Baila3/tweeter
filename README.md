@@ -12,9 +12,9 @@ This tweeter app allows user to post and save tweets to the page. By writing a t
 ## Final Product
 !["Page Layout mobile"](https://github.com/Baila3/tweeter/blob/master/docs/ezgif.com-gif-maker.gif)
 
-!["Page Layout Desktop"](https://github.com/Baila3/tweeter/blob/master/docs/ezgif.com-gif-maker.gif)
+!["Page Layout Desktop"](https://github.com/Baila3/tweeter/blob/master/docs/Screen%20Shot%202022-04-29%20at%208.48.14%20PM.png)
 
-!["Page Layout Tablet](https://github.com/Baila3/tweeter/blob/master/docs/ezgif.com-gif-maker.gif)
+!["Page Layout Tablet"](https://github.com/Baila3/tweeter/blob/master/docs/Screen%20Shot%202022-04-29%20at%208.48.50%20PM.png)
 ## Dependencies
 
 - Express
