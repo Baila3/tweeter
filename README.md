@@ -10,7 +10,7 @@ This tweeter app allows user to post and save tweets to the page. By writing a t
 3. Start the web server using the `npm run local` command. The app will be served at <http://localhost:8080/>.
 4. Go to <http://localhost:8080/> in your browser.
 ## Final Product
-!["Page Layout"](ezgif.com-gif-maker.gif)
+!["Page Layout"](https://giphy.com/gifs/zX77wsouVbcvKtazNW.gif)
 ## Dependencies
 
 - Express
