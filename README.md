@@ -10,13 +10,15 @@ This tweeter app allows user to post and save tweets to the page. By writing a t
 ## Final Product
 
 This is a demo of the app in a mobile display
+
 !["Page Layout mobile"](https://github.com/Baila3/tweeter/blob/master/docs/mobile.gif)
 
 This shows a desktop view of the tweeter app!
+
 !["Page Layout Desktop"](https://github.com/Baila3/tweeter/blob/master/docs/desktop-view.png)
 
 This is a tablet sized display of the tweeter app!
->>>>>>> a0262f0143615008be3fa89b9b212df295e2ab27
+
 !["Page Layout Tablet"](https://github.com/Baila3/tweeter/blob/master/docs/tablet-view.png)
 
 ## Dependencies
