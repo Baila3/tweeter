@@ -1,29 +1,4 @@
 $(document).ready(() => {
-  // database
-  const data = [
-    {
-      "user": {
-        "name": "Newton",
-        "avatars": "https://i.imgur.com/73hZDYK.png"
-        ,
-        "handle": "@SirIsaac"
-      },
-      "content": {
-        "text": "If I have seen further it is by standing on the shoulders of giants"
-      },
-      "created_at": 1461116232227
-    },
-    {
-      "user": {
-        "name": "Descartes",
-        "avatars": "https://i.imgur.com/nlhLi3I.png",
-        "handle": "@rd" },
-      "content": {
-        "text": "Je pense , donc je suis"
-      },
-      "created_at": 1461113959088
-    }
-  ]
 
   // render tweets function
   const renderTweets = function(tweets) {
@@ -64,8 +39,6 @@ $(document).ready(() => {
   </div>`);
     return $tweet;
   }
-  // renderTweets function call
-  renderTweets(data);
 
   //loadTweet function with ajax
   const loadTweet = function() {
@@ -74,11 +47,9 @@ $(document).ready(() => {
       url: "/tweets",
       dataType: "json"
     }).then((res) => {
-      let arr = [];
-      let tweet = res.pop()
-      arr.push(tweet)
-      renderTweets(arr)
+      renderTweets(res)
     })
+    .catch(err => { console.log(err) });
   }
 
   // triggerTweet function
@@ -91,14 +62,12 @@ $(document).ready(() => {
    }
    $('#message1').removeClass("errorMesg")
    $('#message2').removeClass("errorMesg")
-  const formData = $("form").serialize()
-  console.log(formData)
-  $.post("http://localhost:8080/tweets", formData, () => { loadTweet() });
-}
-// submit form
-$( "form" ).submit(triggerTweet)
+    const formData = $("form").serialize()
+    $.post("http://localhost:8080/tweets", formData, () => { loadTweet() });
+  }
 
-
- 
+  // submit form
+  $("form").submit(triggerTweet)
+  //loadTweet call
+  loadTweet()
 })
-
